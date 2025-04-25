@@ -1,0 +1,326 @@
+[dir="rtl"] .fixed-bg {
+  right: 0;
+}
+
+[dir="rtl"] .scheme5-layer:before {
+  right: 0;
+}
+
+[dir="rtl"] .scroll-h-anime {
+  padding-right: 2rem;
+}
+
+
+[dir="rtl"] .tags-box-wrap:before {
+  right: 1.25rem;
+  left: -1.25rem;
+}
+
+[dir="rtl"] header {
+  right: 0;
+}
+
+[dir="rtl"] .logo a img {
+  right: 0;
+}
+
+[dir="rtl"] nav ul {
+  padding-right: 0;
+}
+
+[dir="rtl"] nav ul li a:before {
+  right: 50%;
+  left: 50%;
+}
+
+[dir="rtl"] nav ul li.active > a:before {
+  right: -10px;
+  left: -10px;
+}
+
+[dir="rtl"] .cont-info-inner {
+  padding-right: 2px;
+}
+/* Basic LTR separator */
+.breadcrumb li.breadcrumb-item + li.breadcrumb-item:before {
+  content: "|";
+  padding: 0 12px;
+  color: inherit;
+}
+
+/* RTL separator - keeping the same vertical line */
+[dir="rtl"] .breadcrumb li.breadcrumb-item + li.breadcrumb-item:before {
+  content: "|";
+  padding: 0 12px;
+  color: inherit;
+  float: right;
+}
+[dir="rtl"] .res-menu-close {
+  left: 10px;
+}
+
+[dir="rtl"] .resume-info {
+  margin-right: 15px;
+}
+
+[dir="rtl"] .sec-sub {
+  text-align: center;
+}
+
+[dir="rtl"] .theme-btn3:before {
+  right: -50%;
+}
+
+[dir="rtl"] .theme-btn3:after {
+  right: 0;
+}
+
+[dir="rtl"] .fun-fact-boxes > div.row > div:not(:first-child) {
+  border-right: 1px solid var(--color6);
+}
+
+[dir="rtl"] .about-img > a {
+  right: 50%;
+}
+
+[dir="rtl"] .serv-box > a {
+  margin-right: auto;
+}
+
+[dir="rtl"] .hire-head-box {
+  margin-right: -80%;
+}
+
+
+[dir="rtl"] .port-cat {
+  right: 1.25rem;
+}
+
+[dir="rtl"] .port-img > a:before {
+  left: -22%;
+}
+
+[dir="rtl"] .port-info > a {
+  margin-right: auto;
+}
+
+[dir="rtl"] .plan-body ul {
+  padding-right: 1.125rem;
+}
+
+[dir="rtl"] .plan-body ul li {
+  padding-right: 10px;
+}
+
+[dir="rtl"] .theme-btn2 {
+  text-align: left;
+}
+
+[dir="rtl"] .post-box:before {
+  left: 0;
+  right: 0;
+}
+
+[dir="rtl"] .post-box.list:before {
+  right: 4.375rem;
+}
+
+[dir="rtl"] .port-detail-info-boxes > div.row > div:not(:first-child) {
+  border-right: 1px solid var(--color6);
+}
+
+[dir="rtl"] .list-style {
+  padding-right: 3.125rem;
+}
+
+[dir="rtl"] .list-style > li {
+  padding-right: 12px;
+}
+
+[dir="rtl"] .serv-detail-cap > h3 strong {
+  margin-right: 1.5rem;
+}
+
+[dir="rtl"] .serv-detail-cont-box .single-gal-box {
+  margin-right: -2.5rem;
+}
+
+[dir="rtl"] .single-detail-navs {
+  border-right: 0;
+  border-left: 0;
+}
+
+[dir="rtl"] .single-detail-navs > div + div:before {
+  right: -0.5px;
+}
+
+[dir="rtl"] .single-detail-nav-right {
+  text-align: left;
+}
+
+[dir="rtl"] .blog-meta-social {
+  border-right: 0;
+  border-left: 0;
+}
+
+[dir="rtl"] .blog-meta > span + span {
+  margin-right: 1.34375rem;
+  padding-right: 1.78125rem;
+}
+
+[dir="rtl"] .blog-meta > span + span:before {
+  right: 0;
+}
+
+[dir="rtl"] nav ul ul {
+  right: 0;
+}
+
+[dir="rtl"] nav ul li.menu-item-has-children a {
+  padding-left: 0.9375rem;
+}
+
+[dir="rtl"] nav ul li.menu-item-has-children a > i {
+  left: 0;
+}
+
+[dir="rtl"] nav ul ul li.menu-item-has-children a > i {
+  left: 0.9375rem;
+}
+
+[dir="rtl"] nav ul ul li.active > a:before {
+  right: 0;
+  left: 0;
+}
+
+[dir="rtl"] nav ul ul ul {
+  right: 100%;
+}
+
+[dir="rtl"] nav ul ul li.menu-item-has-children > a {
+  padding-left: 2.1875rem;
+}
+
+[dir="rtl"] .edu-box {
+  padding-right: 2.3125rem;
+}
+
+[dir="rtl"] .exp-box {
+  padding-right: 2.569375rem;
+}
+
+[dir="rtl"] .serv-detail-cont-box .single-gal-box {
+  margin-right: 0;
+}
+
+[dir="rtl"] .res-menu-close {
+  left: 20px;
+}
+
+[dir="rtl"] nav > ul {
+  left: -320px;
+}
+
+[dir="rtl"] nav > ul.slidein {
+  left: 0;
+}
+
+[dir="rtl"] nav > ul > li > a:hover {
+  padding-right: 10px;
+}
+
+[dir="rtl"] .mobile-menu-lang a:hover {
+  padding-right: 20px !important;
+}
+
+[dir="rtl"] .mobile-menu-cta a:before {
+  right: -100%;
+}
+
+[dir="rtl"] .mobile-menu-cta a:hover {
+  padding-right: 25px !important;
+}
+
+[dir="rtl"] .mobile-menu-cta a:hover:before {
+  right: 100%;
+}
+
+[dir="rtl"] .res-menu-close {
+  left: auto;
+  right: 20px;
+}
+
+[dir="rtl"] nav > ul {
+  left: auto;
+  right: -320px;
+}
+
+[dir="rtl"] nav > ul.slidein {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] nav > ul > li > a:hover {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+[dir="rtl"] .about-cap {
+  text-align: left;
+}
+
+[dir="rtl"] .port-detail-info-boxes > div.row > div:nth-child(2n + 1) {
+  border-right: 0;
+}
+
+[dir="rtl"] .gen-controls {
+  text-align: left;
+}
+
+[dir="rtl"] .testi-box {
+  text-align: left;
+}
+
+[dir="rtl"] .post-box.list:before {
+  right: 0;
+}
+
+[dir="rtl"] .post-box {
+  text-align: left;
+}
+
+[dir="rtl"] .post-info {
+  text-align: left;
+}
+
+[dir="rtl"] .page-title {
+  text-align: left;
+}
+
+[dir="rtl"] .intro-btns {
+  text-align: left;
+}
+
+[dir="rtl"] .edu-box {
+  text-align: right;
+  border-radius:0 var(--round15) 0 var(--round15) ;
+}
+.edu-box > span, .exp-box > span{
+  left:0px;
+  right: auto;
+}
+[dir="rtl"] .single-detail-nav-left > a {
+  padding-left: 10px;
+}
+
+[dir="rtl"] .single-detail-nav-right > a {
+  padding-right: 10px;
+}
+
+[dir="rtl"] .fun-fact-boxes > div.row > div:not(:first-child) {
+  border-right: 0;
+}
+
+[dir="rtl"] .user-info {
+  text-align: left;
+}
