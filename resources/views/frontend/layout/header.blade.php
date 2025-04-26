@@ -37,7 +37,7 @@
                         
                         <!-- Mobile-only contact button -->
                         <li id="displayNone" class="mobile-menu-cta">
-                            <a href="javascript:void(0);">
+                            <a href="{{ route('home') }}#contact">
                                 <span>{{ __('LETS TALK') }}</span>
                                 <i class="far {{ app()->getLocale() == 'ar' ? 'fa-long-arrow-left' : 'fa-long-arrow-right' }}"></i>
                             </a>
@@ -54,8 +54,8 @@
                             <i class="far fa-globe ms-1"></i>
                         </a>
                     </div>
-                    <a href="mailto:user@yoursite.com" title=""><i class="far fa-envelope"></i>user@yoursite.com</a>
-                    <a href="javascript:void(0);" title="">{{ __('LETS TALK') }} <i class="far {{ app()->getLocale() == 'ar' ? 'fa-long-arrow-left' : 'fa-long-arrow-right' }}"></i></a>
+                    <a href="mailto:{{ $settings['email'] ?? 'abdelhababseh@icloud.com' }}" title=""><i class="far fa-envelope"></i>{{ $settings['email'] ?? 'abdelhababseh@icloud.com' }}</a>
+                    <a href="{{ route('home') }}#contact" title="">{{ __('LETS TALK') }} <i class="far {{ app()->getLocale() == 'ar' ? 'fa-long-arrow-left' : 'fa-long-arrow-right' }}"></i></a>
                 </div><!-- Contact Links -->
             </div><!-- Logo Menu Inner -->
         </div>

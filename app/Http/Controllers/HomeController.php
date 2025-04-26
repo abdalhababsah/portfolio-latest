@@ -19,25 +19,24 @@ class HomeController extends Controller
 
 public function index()
 {
-    $locale = app()->getLocale();                      // "en" or "ar"
+    $locale = app()->getLocale();                   
             
 
     /* ---------- SERVICES ---------- */
     $services = Service::query()
-        ->with('images')
-        ->select([
-            'id',
-            'slug',
-            "title_{$locale}       AS title",
-            "description_{$locale} AS description",
-            'price',
-            'currency',
-            "unit_{$locale}        AS unit",
-            'cover_image'
-        ])
-        ->latest()
-        ->take(6)
-        ->get();
+    ->with('images')                         
+    ->select([
+        'id',
+        'slug',
+        'title_en','title_ar',               
+        'description_en','description_ar',
+        'price','currency',
+        'unit_en','unit_ar',
+        'cover_image'
+    ])
+    ->latest()
+    ->take(6)
+    ->get();
 
     /* ---------- EXPERIENCES ---------- */
     $experiences = Experience::query()

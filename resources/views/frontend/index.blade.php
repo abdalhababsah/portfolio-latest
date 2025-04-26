@@ -59,7 +59,7 @@
                                                     <div
                                                         class="fun-fact-box d-flex flex-column align-items-start position-relative w-100">
                                                         <span>{{ __('Worldwide Client') }}</span>
-                                                        <h3 class="mb-0 fw-normal sz-30">1.3k</h3>
+                                                        <h3 class="mb-0 fw-normal sz-30">13</h3>
                                                     </div><!-- Fun Fact Box -->
                                                 </div>
                                                 <div class="col-md-6 col-sm-6 col-lg-3 wow fadeIn" data-wow-duration="1s"
@@ -67,7 +67,7 @@
                                                     <div
                                                         class="fun-fact-box d-flex flex-column align-items-start position-relative w-100">
                                                         <span>{{ __('Job Done Successfully') }}</span>
-                                                        <h3 class="mb-0 fw-normal sz-30">4.9k</h3>
+                                                        <h3 class="mb-0 fw-normal sz-30">32</h3>
                                                     </div><!-- Fun Fact Box -->
                                                 </div>
                                             </div>
@@ -130,7 +130,7 @@
                                                                 class="port-cat d-flex align-items-center position-absolute">
                                                                 @foreach ($project->technologies as $tech)
                                                                     <a href="javascript:void(0);"
-                                                                        title="">{{ $tech->name_en ?? '' }}</a>
+                                                                        title="">{{ $tech->name ?? '' }}</a>
                                                                 @endforeach
                                                             </div>
                                                         </div>
@@ -159,7 +159,7 @@
                                         class="sec-title-wrap mb-50 d-flex flex-column align-items-center text-center w-100">
                                         <div class="sec-title d-flex flex-column align-items-center w-100">
                                             <span class="sec-sub rounded-pill text-center">{{ __('My Skills') }}</span>
-                                            <h2 class="mb-0 sz-40">{{ __('My Advantages') }}</h2>
+                                            <h2 class="mb-0 sz-40">{{ __('My Skills') }}</h2>
                                         </div>
                                     </div>
                                     <div class="skill-boxes position-relative w-100">
@@ -171,14 +171,14 @@
                                                         <div class="skill-img overflow-hidden position-relative w-100 p-3">
                                                             <img class="img-fluid"
                                                                 src="{{ asset('storage/' . ($skill->icon ?? 'frontend/assets/images/placeholder.png')) }}"
-                                                                alt="{{ $skill->name ?? $skill->name_en }}"
+                                                                alt="{{ $skill->name ?? $skill->name }}"
                                                                 loading="lazy">
                                                         </div>
                                                         <div
                                                             class="skill-info d-flex flex-column align-items-center w-100 py-2">
                                                             <h3 class="mb-0 fw-normal sz-36">{{ $skill->level ?? 100 }}%
                                                             </h3>
-                                                            <h4 class="mb-0 sz-20">{{ $skill->name ?? $skill->name_en }}
+                                                            <h4 class="mb-0 sz-20">{{ $skill->name ?? $skill->name }}
                                                             </h4>
                                                         </div>
                                                     </div>
@@ -217,9 +217,9 @@
                                                         <div
                                                             class="edu-box round15 d-flex flex-column position-relative w-100 p-3">
                                                             <h4 class="mb-0 fw-normal sz-24">
-                                                                {{ $edu->degree ?? $edu->degree_en }}</h4>
+                                                                {{ $edu->degree ?? $edu->degree }}</h4>
                                                             <p class="mb-0">
-                                                                {{ $edu->institution ?? $edu->institution_en }}</p>
+                                                                {{ $edu->institution ?? $edu->institution }}</p>
                                                             <span>{{ \Carbon\Carbon::parse($edu->start_date)->format('Y') }}
                                                                 -
                                                                 {{ $edu->end_date ? \Carbon\Carbon::parse($edu->end_date)->format('Y') : __('Present') }}</span>
@@ -243,8 +243,8 @@
                                                         <div
                                                             class="exp-box round15 d-flex flex-column position-relative w-100 p-3">
                                                             <h4 class="mb-0 fw-normal sz-24 position-relative">
-                                                                {{ $exp->position ?? $exp->position_en }}</h4>
-                                                            <p class="mb-0">{{ $exp->company ?? $exp->company_en }}</p>
+                                                                {{ $exp->position ?? $exp->position }}</h4>
+                                                            <p class="mb-0">{{ $exp->company ?? $exp->company }}</p>
                                                             <span>{{ \Carbon\Carbon::parse($exp->start_date)->format('Y') }}
                                                                 -
                                                                 {{ $exp->end_date ? \Carbon\Carbon::parse($exp->end_date)->format('Y') : __('Present') }}</span>

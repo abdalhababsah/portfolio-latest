@@ -5,6 +5,7 @@ use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use App\Http\Middleware\LoadGlobalViewData;
 use App\Http\Middleware\Localization;
+use App\Http\Middleware\TrackVisits;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -16,6 +17,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->web(append:[
             Localization::class,
             LoadGlobalViewData::class,
+            TrackVisits::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

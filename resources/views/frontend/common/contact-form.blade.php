@@ -14,8 +14,10 @@
                         <span><i class="fas fa-phone"></i></span>
                         <div class="cont-info-inner d-flex align-items-start flex-column">
                             <span>{{ __('Contact Me At:') }}</span>
-                            <a href="tel:{{ $settings['phone'] ?? '' }}"
-                                title="{{ __('Call Us') }}">{{ $settings['phone'] ?? '(000) 000-0000' }}</a>
+                            <a href="tel:{{ $setting['phone_number'] ?? '00962782445888' }}"
+
+                            
+                                title="{{ __('Call Us') }}">{{ $setting['phone_number'] ?? '00962782445888' }}</a>
                         </div>
                     </div>
                 </div>

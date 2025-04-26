@@ -79,7 +79,7 @@
                                                     </svg></span>
                                                 <div class="cont-info-inner d-flex align-items-start flex-column">
                                                     <span>{{ __('Contact Me At:') }}</span>
-                                                    <a href="tel:{{ config('settings.phone_number', '(635) 525-4250') }}" title="Call Us">{{ config('settings.phone_number', '(635) 525-4250') }}</a>
+                                                    <a href="tel:{{ $setting['phone_number'] ?? '00962782445888' }}" title="Call Us">{{ $setting['phone_number'] ?? '00962782445888' }}</a>
                                                 </div><!-- Contact Info Inner -->
                                             </div><!-- Contact Info -->
                                             <div class="btn-box position-relative">

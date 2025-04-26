@@ -807,7 +807,9 @@ progress {
   font-size: 0.75rem;
   color: var(--bs-secondary-color);
 }
-
+.page-container{
+  margin-top: 30px !important;
+}
 .container,
 .container-fluid,
 .page-container,
