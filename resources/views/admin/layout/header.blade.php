@@ -46,14 +46,14 @@
                     <a class="topbar-link btn btn-outline-primary dropdown-toggle drop-arrow-none" data-bs-toggle="dropdown" data-bs-offset="0,22" type="button" aria-haspopup="false" aria-expanded="false">
                         <img src="assets/images/users/avatar-1.jpg" width="24" class="rounded-circle me-lg-2 d-flex" alt="user-image">
                         <span class="d-lg-flex flex-column gap-1 d-none">
-                            {{ Auth::user()->name }}
+                            {{ Auth::user()->name ?? 'Admin' }}
                         </span>
                         <i class="ti ti-chevron-down d-none d-lg-block align-middle ms-2"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end">
                         <!-- item-->
                         <div class="dropdown-header noti-title">
-                            <h6 class="text-overflow m-0">Welcome {{ Auth::user()->name }}!</h6>
+                            <h6 class="text-overflow m-0">Welcome  {{ Auth::user()->name ?? 'Admin' }}!</h6>
                         </div>
 
                         <!-- item-->

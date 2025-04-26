@@ -29,7 +29,7 @@ Route::get('/', function () {
 });
 
 
-Route::prefix('admin')->group(function () {
+Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('/projects', AdminProjectController::class)->names('admin.projects');
     Route::put('projects/{id}/toggle-featured', [AdminProjectController::class, 'toggleFeatured'])->name('admin.projects.toggle-featured');
@@ -37,7 +37,7 @@ Route::prefix('admin')->group(function () {
     Route::delete('projects/{id}/images/{imageId}', [AdminProjectController::class, 'deleteImage'])->name('admin.projects.delete-image');
     Route::delete('projects/{id}/videos/{videoId}', [AdminProjectController::class, 'deleteVideo'])->name('admin.projects.delete-video');
     Route::post('projects/temp-upload', [AdminProjectController::class, 'tempUpload'])
-    ->name('admin.projects.temp-upload');
+        ->name('admin.projects.temp-upload');
     Route::resource('experiences', ExperienceController::class)->names('admin.experiences');
     Route::resource('technologies', TechnologyController::class)->names('admin.technologies');
     Route::resource('educations', EducationController::class)->names('admin.educations');
@@ -54,12 +54,10 @@ Route::prefix('admin')->group(function () {
     Route::resource('certificates', CertificateController::class)->names('admin.certificates');
     Route::get('certificates/{certificate}/download', [CertificateController::class, 'download'])->name('admin.certificates.download');
 
-
     Route::resource('contacts', AdminContactController::class)->only(['index', 'show', 'destroy'])->names('admin.contacts');
     Route::post('contacts/mark-read', [AdminContactController::class, 'markAsRead'])->name('admin.contacts.mark-read');
     Route::get('contacts/unread-count', [AdminContactController::class, 'getUnreadCount'])->name('admin.contacts.unread-count');
 });
-
 require __DIR__.'/auth.php';
 
 
