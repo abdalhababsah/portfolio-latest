@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="resume-wrapper d-flex justify-content-between position-relative w-100">
                     {{-- ================= Sidebar ================= --}}
-@include('frontend.common.sticky-user-card')
+                    @include('frontend.common.sticky-user-card')
 
                     {{-- ================= Main ================= --}}
                     <div class="resume-content d-flex flex-column">
@@ -42,8 +42,8 @@
                                                     data-wow-delay=".2s">
                                                     <div
                                                         class="fun-fact-box d-flex flex-column align-items-start position-relative w-100">
-                                                        <span>{{ __('Born In') }}</span>
-                                                        <h3 class="mb-0 fw-normal sz-30">Locust, USA</h3>
+                                                        <span>{{ __('Living In') }}</span>
+                                                        <h3 class="mb-0 fw-normal sz-30">{{ __('Jordan, Amman') }}</h3>
                                                     </div><!-- Fun Fact Box -->
                                                 </div>
                                                 <div class="col-md-6 col-sm-6 col-lg-3 wow fadeIn" data-wow-duration="1s"
@@ -51,7 +51,7 @@
                                                     <div
                                                         class="fun-fact-box d-flex flex-column align-items-start position-relative w-100">
                                                         <span>{{ __('Experience') }}</span>
-                                                        <h3 class="mb-0 fw-normal sz-30">5+ {{ __('Years') }}</h3>
+                                                        <h3 class="mb-0 fw-normal sz-30">2+ {{ __('Years') }}</h3>
                                                     </div><!-- Fun Fact Box -->
                                                 </div>
                                                 <div class="col-md-6 col-sm-6 col-lg-3 wow fadeIn" data-wow-duration="1s"
@@ -78,19 +78,19 @@
                             <section>
                                 <div class="position-relative pt-140 w-100">
                                     <div class="row">
-                                        <div class="col-md-12 col-sm-12 col-lg-5">
+                                        <div class="col-md-12 col-sm-12 col-lg-12">
                                             <div class="sec-title-wrap mb-50 d-flex flex-column align-items-start position-relative w-100 wow fadeInUp"
                                                 data-wow-duration=".5s" data-wow-delay=".2s">
                                                 <div class="sec-title d-flex flex-column align-items-start w-100">
                                                     <span
                                                         class="sec-sub rounded-pill text-center">{{ __('About Me') }}</span>
-                                                    <h2 class="mb-0 sz-40">
-                                                        {{ __('I Have Rich Experience In Web Site Design') }}
-                                                    </h2>
+                                                    <h3 class="mb-0 sz-30">
+                                                        {{ $settings['about_me'] ?? __('I Have Rich Experience In Web Site Design') }}
+                                                    </h3>
                                                 </div><!-- Sec Title -->
                                                 @if (isset($settings['cv_url']))
                                                     <a class="simple-link wow fadeInUp" data-wow-duration=".5s"
-                                                        data-wow-delay=".4s" href="{{ $settings['cv_url'] }}"
+                                                        data-wow-delay=".4s" href="{{ asset($settings['cv_url']) }}"
                                                         title="" download><i
                                                             class="fas fa-arrow-alt-to-bottom round5"></i>{{ __('Download CV') }}
                                                     </a>
@@ -102,24 +102,7 @@
                                                 @endif
                                             </div><!-- Sec Title Wrap -->
                                         </div>
-                                        <div class="col-md-12 col-sm-12 col-lg-7">
-                                            <div class="about-cap d-flex flex-column position-relative w-100">
-                                                <div class="about-img round15 overflow-hidden position-relative w-100 wow fadeIn"
-                                                    data-wow-duration="1s" data-wow-delay=".5s">
-                                                    <img class="img-fluid w-100" src="assets/images/resources/about-img.jpg"
-                                                        alt="{{ __('About Image') }}" loading="lazy">
-                                                    <a class="position-absolute sz-60"
-                                                        href="https://www.youtube.com/embed/peiPQzRIxpI?si=anW1E2xiT9J98Xb5"
-                                                        data-fancybox title=""><i class="fas fa-play-circle"></i></a>
-                                                </div><!-- About Image -->
-                                                <p class="mb-0">
-                                                    {{ __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisi, augue urna, mauris elementum ligula semper enim. Tristique sed sit facilisis ultrices rhoncus eget ullamcorper tellus. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendi.') }}
-                                                </p>
-                                                <p class="mb-0">
-                                                    {{ __('Srepellat volup tatibus maiores aliasta consequatur auto perferendis repellat quia voluptas sit upto aspernatur te natus accusan.') }}
-                                                </p>
-                                            </div><!-- About Cap -->
-                                        </div>
+                                     
                                     </div>
                                 </div>
                             </section>
@@ -140,7 +123,7 @@
                                                             class="port-img round15 overflow-hidden position-relative w-100">
                                                             <a href="javascript:void(0);">
                                                                 <img class="img-fluid w-100"
-                                                                    src="{{ asset('frontend/assets/images/resources/user-img.png') }}"
+                                                                    src="{{ asset('storage/' . $project->cover_image) }}"
                                                                     alt="{{ __('Placeholder Image') }}" loading="lazy">
                                                             </a>
                                                             <div
@@ -157,8 +140,8 @@
                                                                 <i class="far fa-long-arrow-right"></i></a>
                                                             <h4 class="mb-0 fw-normal sz-26"><a
                                                                     href="{{ route('projects.show', $project->slug) }}"
-                                                                    title="">{{ $project->title_en }}</a></h4>
-                                                            <span>{{ $project->category?->name_en }}</span>
+                                                                    title="">{{ $project->title }}</a></h4>
+                                                            <span>{{ $project->category?->name }}</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -187,7 +170,7 @@
                                                         class="skill-box round15 overflow-hidden position-relative text-center w-100">
                                                         <div class="skill-img overflow-hidden position-relative w-100 p-3">
                                                             <img class="img-fluid"
-                                                                src="{{ asset($skill->icon ?? 'frontend/assets/images/placeholder.png') }}"
+                                                                src="{{ asset('storage/' . ($skill->icon ?? 'frontend/assets/images/placeholder.png')) }}"
                                                                 alt="{{ $skill->name ?? $skill->name_en }}"
                                                                 loading="lazy">
                                                         </div>
@@ -208,10 +191,8 @@
                             <section>
                                 <div class="position-relative pt-110 w-100">
                                     <div class="hire-head-box position-relative w-100">
-                                        <h2
-                                            class="mb-0 sz-90 fw-bolder text-white cont-opc5 scroll-h-anime position-absolute"
-                                            data-text="Laravel. PHP. VueJS. jQuery. React. Tailwind. Bootstrap. Laravel. PHP. VueJS. jQuery. React. Tailwind. Bootstrap."
-                                        >
+                                        <h2 class="mb-0 sz-90 fw-bolder text-white cont-opc5 scroll-h-anime position-absolute"
+                                            data-text="Laravel. PHP. VueJS. jQuery. React. Tailwind. Bootstrap. Laravel. PHP. VueJS. jQuery. React. Tailwind. Bootstrap.">
                                             Laravel. PHP. VueJS. jQuery. React. Tailwind. Bootstrap.
                                         </h2>
                                     </div><!-- Hire Head Line Box -->
@@ -294,7 +275,8 @@
                                                         class="serv-box round15 d-flex flex-column position-relative w-100 h-100">
                                                         <a class="serv-read rounded-circle"
                                                             href="{{ route('services.show', $service->slug) }}"
-                                                            title=""><i class="far {{ app()->getLocale() == 'ar' ? 'fa-long-arrow-left' : 'fa-long-arrow-right' }}"></i></a>
+                                                            title=""><i
+                                                                class="far {{ app()->getLocale() == 'ar' ? 'fa-long-arrow-left' : 'fa-long-arrow-right' }}"></i></a>
                                                         <h3 class="mb-0 fw-normal sz-30"><a
                                                                 href="{{ route('services.show', $service->slug) }}"
                                                                 title="">{!! nl2br(e($service->title ?? '')) !!}</a></h3>
@@ -468,7 +450,7 @@
                             </section>
 
                             {{-- ************ CONTACT ************ --}}
-                     @include('frontend.common.contact-form')
+                            @include('frontend.common.contact-form')
                         </div>
                     </div>
                 </div>

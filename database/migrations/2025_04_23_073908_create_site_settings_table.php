@@ -14,10 +14,6 @@ class CreateSiteSettingsTable extends Migration
             $table->string('key_name', 100)->unique();
             $table->text('value_en')->nullable();
             $table->text('value_ar')->nullable();
-            $table->text('about_me_en')->nullable();
-            $table->text('about_me_ar')->nullable();
-            $table->string('profile_image')->nullable();
-            $table->string('email')->nullable();
             $table->timestamps();
         });
     }

@@ -20,11 +20,7 @@ class HomeController extends Controller
 public function index()
 {
     $locale = app()->getLocale();                      // "en" or "ar"
-
-    /* ---------- SINGLE-ROW SETTINGS ---------- */
-    $settings = SiteSetting::query()
-        ->select('key_name', "value_{$locale} AS value")
-        ->pluck('value', 'key_name');                  // ['site_title' => 'العنوان', …]
+            
 
     /* ---------- SERVICES ---------- */
     $services = Service::query()
@@ -157,7 +153,7 @@ public function index()
     return view('frontend.index', compact(
         'services', 'experiences', 'education', 'projects',
         'testimonials', 'skills', 'blogs', 'certificates',
-        'settings', 'socialLinks'
+        'socialLinks'
     ));
 }
 

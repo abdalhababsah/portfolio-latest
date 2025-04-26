@@ -12,6 +12,17 @@
     {{-- Favicon --}}
     <link rel="shortcut icon" href="{{ asset('admin/assets/images/favicon.ico') }}">
 
+    <!-- Theme Config Js -->
+    <script src="{{ asset('admin/assets/js/config.js') }}"></script>
+
+    <!-- Vendor css -->
+
+    <!-- App css -->
+
+    <!-- Icons css -->
+    <link href="{{ asset('admin/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+
+
     {{-- Core vendor CSS --}}
     <link rel="stylesheet" href="{{ asset('admin/assets/css/vendor.min.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/assets/css/icons.min.css') }}">
@@ -59,6 +70,13 @@
     {{-- Core theme JS --}}
     <script src="{{ asset('admin/assets/js/app.js') }}"></script>
 
+    <!-- App js -->
+
+    <!-- Apex Chart js -->
+    <script src="{{ asset('admin/assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
+
+    <!-- Projects Analytics Dashboard App js -->
+    <script src="{{ asset('admin/assets/js/pages/dashboard-sales.js') }}"></script>
     {{-- 3rd-party plugins --}}
     <script src="{{ asset('admin/assets/vendor/select2/js/select2.full.min.js') }}"></script>
     <script src="{{ asset('admin/assets/vendor/quill/quill.min.js') }}"></script>

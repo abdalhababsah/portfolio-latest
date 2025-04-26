@@ -97,6 +97,16 @@
             color: #777;
         }
         
+        /* Security section */
+        .security-info {
+            margin-top: 20px;
+            font-size: 11px;
+            color: #666;
+            text-align: center;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+        
         /* Decorative elements */
         .accent-corner {
             position: absolute;
@@ -172,6 +182,11 @@
             
             <div class="message-container">
                 {!! nl2br(e($contact->message)) !!}
+            </div>
+            
+            <div class="security-info">
+                <p>Message ID: {{ $contact->id }} • Sent: {{ $contact->created_at->format('d/m/Y H:i:s') }}</p>
+                <p>IP Address: {{ $contact->ip_address ?? 'Not recorded' }}</p>
             </div>
         </div>
         

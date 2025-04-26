@@ -22,7 +22,7 @@ class LoadGlobalViewData
             now()->addMinutes(10),              // tweak as needed
             function () use ($locale) {
                 return SiteSetting::query()
-                         ->select('key_name', "value_{$locale} AS value",'profile_image',"about_me_{$locale} AS about_me",'email')
+                         ->select('key_name', "value_{$locale} AS value")
                          ->pluck('value', 'key_name');   
             }
         );

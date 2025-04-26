@@ -20,6 +20,9 @@ class ContactController extends Controller
             'message' => ['required', 'string'],
         ]);
 
+        // Add IP address to the data
+        $validated['ip_address'] = $request->ip();
+
         // 1. Save to DB
         $contact = Contact::create($validated);
 
