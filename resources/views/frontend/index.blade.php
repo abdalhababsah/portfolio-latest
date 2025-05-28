@@ -154,32 +154,27 @@
 
                             {{-- ************ SKILLS ************ --}}
                             <section id="skills">
-                                <div class="position-relative pt-120 w-100">
-                                    <div
-                                        class="sec-title-wrap mb-50 d-flex flex-column align-items-center text-center w-100">
+                                <div class="position-relative pt-80 w-100">
+                                    <div class="sec-title-wrap mb-30 d-flex flex-column align-items-center text-center w-100">
                                         <div class="sec-title d-flex flex-column align-items-center w-100">
                                             <span class="sec-sub rounded-pill text-center">{{ __('My Skills') }}</span>
-                                            <h2 class="mb-0 sz-40">{{ __('My Skills') }}</h2>
+                                            <h2 class="mb-0 sz-30">{{ __('My Skills') }}</h2>
                                         </div>
                                     </div>
                                     <div class="skill-boxes position-relative w-100">
-                                        <div class="row justify-content-center mrg20">
+                                        <div class="row justify-content-center mrg15">
                                             @foreach ($skills as $skill)
-                                                <div class="col-md-4 col-sm-6 col-lg-3">
-                                                    <div
-                                                        class="skill-box round15 overflow-hidden position-relative text-center w-100">
-                                                        <div class="skill-img overflow-hidden position-relative w-100 p-3">
+                                                <div class="col-md-3 col-sm-4 col-lg-2">
+                                                    <div class="skill-box round15 overflow-hidden position-relative text-center w-100">
+                                                        <div class="skill-img overflow-hidden position-relative w-100 p-2">
                                                             <img class="img-fluid"
                                                                 src="{{ asset('storage/' . ($skill->icon ?? 'frontend/assets/images/placeholder.png')) }}"
                                                                 alt="{{ $skill->name ?? $skill->name }}"
                                                                 loading="lazy">
                                                         </div>
-                                                        <div
-                                                            class="skill-info d-flex flex-column align-items-center w-100 py-2">
-                                                            <h3 class="mb-0 fw-normal sz-36">{{ $skill->level ?? 100 }}%
-                                                            </h3>
-                                                            <h4 class="mb-0 sz-20">{{ $skill->name ?? $skill->name }}
-                                                            </h4>
+                                                        <div class="skill-info d-flex flex-column align-items-center w-100 py-1">
+                                                            <h3 class="mb-0 fw-normal sz-24">{{ $skill->level ?? 100 }}%</h3>
+                                                            <h4 class="mb-0 sz-16">{{ $skill->name ?? $skill->name }}</h4>
                                                         </div>
                                                     </div>
                                                 </div>
