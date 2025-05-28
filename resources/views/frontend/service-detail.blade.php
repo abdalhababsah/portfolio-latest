@@ -108,15 +108,18 @@
                                                     
                                                     @php
                                                         // Extract bullet points from description if any
-                                                        $dom = new \DOMDocument();
-                                                        @$dom->loadHTML(mb_convert_encoding($service->description, 'HTML-ENTITIES', 'UTF-8'));
-                                                        $lists = $dom->getElementsByTagName('ul');
                                                         $listItems = [];
                                                         
-                                                        if ($lists->length > 0) {
-                                                            $items = $lists->item(0)->getElementsByTagName('li');
-                                                            foreach ($items as $item) {
-                                                                $listItems[] = $item->textContent;
+                                                        if (!empty($service->description)) {
+                                                            $dom = new \DOMDocument();
+                                                            @$dom->loadHTML(mb_convert_encoding($service->description, 'HTML-ENTITIES', 'UTF-8'), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+                                                            $lists = $dom->getElementsByTagName('ul');
+                                                            
+                                                            if ($lists->length > 0) {
+                                                                $items = $lists->item(0)->getElementsByTagName('li');
+                                                                foreach ($items as $item) {
+                                                                    $listItems[] = $item->textContent;
+                                                                }
                                                             }
                                                         }
                                                     @endphp

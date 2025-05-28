@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
                  |  0.  House-keeping
                  | -----------------------------------------------------------------
                  */
-        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        // DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         foreach (['project_technology', 'project_tag', 'blog_tag',  // pivots first
             'service_images', 'project_images', 'project_videos', 'contacts', 'social_links', 'site_settings', 'skills', 'education', 'experiences', 'testimonials', 'certificates', 'faqs', 'projects', 'services', 'blogs', 'categories', 'technologies', 'tags',] as $tbl) {
             DB::table($tbl)->truncate();
@@ -455,7 +455,7 @@ class DatabaseSeeder extends Seeder
             ['platform' => 'Facebook', 'url' => 'https://facebook.com/username', 'icon_class' => 'fa-facebook', 'created_at' => $now, 'updated_at' => $now],
         ]);
 
-        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
+        // DB::statement('SET FOREIGN_KEY_CHECKS = 1');
 
     }
 }

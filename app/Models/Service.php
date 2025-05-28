@@ -63,7 +63,8 @@ class Service extends Model
      */
     public function getTitleAttribute(): string
     {
-        return app()->getLocale() === 'ar' ? $this->title_ar : $this->title_en;
+        $title = app()->getLocale() === 'ar' ? $this->title_ar : $this->title_en;
+        return $title ?? ''; // Return empty string if title is null
     }
 
     /**

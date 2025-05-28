@@ -45,7 +45,7 @@ class StoreProjectRequest extends FormRequest
 
             // New: video files & titles
             'video_files' => 'nullable|array',
-            'video_files.*' => 'file|mimetypes:video/mp4,video/webm,video/ogg',
+            'video_files.*' => 'file',
             'video_captions_en' => 'nullable|array',
             'video_captions_en.*' => 'nullable|string|max:255',
             'video_captions_ar' => 'nullable|array',
