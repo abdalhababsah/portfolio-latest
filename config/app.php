@@ -171,10 +171,10 @@ return [
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
+        // App\Providers\AuthServiceProvider::class, // Removed because it doesn't exist
         // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        // App\Providers\EventServiceProvider::class, // Removed because it doesn't exist
+        // App\Providers\RouteServiceProvider::class, // Removed because it doesn't exist
     ],
 
     /*
