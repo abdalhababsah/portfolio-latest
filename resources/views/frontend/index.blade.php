@@ -253,7 +253,7 @@
                             </section>
 
                             {{-- ************ SERVICES ************ --}}
-                            <section id="services">
+                            {{-- <section id="services">
                                 <div class="position-relative pt-100 w-100">
                                     <div
                                         class="sec-title-wrap mb-50 d-flex flex-column align-items-center text-center w-100">
@@ -288,7 +288,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </section>
+                            </section> --}}
 
 
                             {{-- ************ BLOGS ************ --}}
