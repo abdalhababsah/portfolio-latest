@@ -347,7 +347,7 @@
                             </section> --}}
 
                             {{-- ************ TESTIMONIALS ************ --}}
-                            <section id="testimonials">
+                            {{-- <section id="testimonials">
                                 <div class="position-relative pt-110 w-100">
                                     <div class="sec-title-wrap mb-50 text-center">
                                         <div class="sec-title">
@@ -390,7 +390,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </section>
+                            </section> --}}
 
                             {{-- ************ CERTIFICATES ************ --}}
                             <section id="certificates">
